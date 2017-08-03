@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Post List</title>
+</head>
+<body>
+	<h1>The {{user}} {{title}} Page </h1>
+	{%for object in object_list%}
+	{{object.id}} <br>
+	{{object.title}} <br>
+	{{object.content}} <br>
+	{{object.timestamp}} <br>
+	{% endfor%}
+</body>
+</html>
