@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Post Create</title>
-</head>
-<body>
-	<h1>The Post {{title}} Page</h1>
+{% extends "base.html" %}
 
+
+
+
+
+{% block title %}
+Create
+{% endblock title %}
+
+
+
+{% block content %}
 
 	<form action="{% url 'posts:create' %}" method="POST">
 	{% csrf_token %}
@@ -14,5 +18,5 @@
 	<input type="submit" value="Create Post">
 
 	</form>
-</body>
-</html>
+
+{%endblock %}
